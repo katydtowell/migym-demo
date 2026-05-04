@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" font-family="'Roboto', Arial, Helvetica, sans-serif">
+  <defs>
+    <!-- Load Roboto so the mockup previews faithfully when viewed in a browser. -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;display=swap');
+      .tile-bg      { fill: #FFFFFF; }
+      .tile-border  { fill: none; stroke: #1B2023; stroke-width: 3; }
+      .tile-label   { font-size: 14px; font-weight: 600; fill: #1B2023; }
+      .tile-desc    { font-size: 12px; font-weight: 400; fill: #2E3538; }
+      .icon         { fill: none; stroke: #2E3538; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .dim-line     { stroke: #C62828; stroke-width: 1; }
+      .dim-tick     { stroke: #C62828; stroke-width: 1; }
+      .dim-text     { font-size: 11px; font-weight: 600; fill: #C62828; }
+      .callout      { stroke: #1976D2; stroke-width: 1; fill: none; }
+      .callout-dot  { fill: #1976D2; }
+      .callout-text { font-size: 11px; font-weight: 500; fill: #1976D2; }
+      .container-bg { fill: #F7F8F9; stroke: #D1D5DB; stroke-width: 1; stroke-dasharray: 4 4; }
+      .container-txt{ font-size: 11px; font-weight: 600; fill: #8A93A0; letter-spacing: 0.4px; }
+      .section-title{ font-size: 14px; font-weight: 700; fill: #1B2023; }
+      .section-sub  { font-size: 11px; fill: #8A93A0; }
+    </style>
+  </defs>
+
+  <!-- ========== TOP-LABEL TILE (e.g. Contact) ========== -->
+  <g transform="translate(40,60)">
+    <text class="section-title" x="0" y="-20">Top-label layout</text>
+    <text class="section-sub"   x="0" y="-6">Contact, Location, Services, Free Trial, Articles, Member Card, My Account, Feedback, Tell a Friend, Web Link, Check In</text>
+
+    <!-- Home-screen tile-area container (dashed) -->
+    <rect class="container-bg" x="0" y="10" width="300" height="220" rx="8"/>
+    <text class="container-txt" x="10" y="28">PHONE TILES CONTAINER · padding 10 / gap 10</text>
+
+    <!-- Tile 1: top-label layout -->
+    <g transform="translate(60,50)">
+      <rect class="tile-bg" x="0" y="0" width="180" height="160" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="177" height="157" rx="10.5"/>
+      <text class="tile-label" x="90" y="30" text-anchor="middle">Contact</text>
+      <!-- phone icon at 38x38, centered, below the label -->
+      <g transform="translate(71,50)">
+        <path class="icon" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" transform="scale(1.583)"/>
+      </g>
+    </g>
+
+    <!-- Dimensions on the tile -->
+    <!-- border radius 12 -->
+    <line class="callout" x1="241" y1="55" x2="285" y2="30"/>
+    <circle class="callout-dot" cx="241" cy="55" r="2.5"/>
+    <text class="callout-text" x="287" y="34">radius 12px</text>
+    <!-- border width 3 -->
+    <line class="callout" x1="62" y1="100" x2="20" y2="110"/>
+    <circle class="callout-dot" cx="62" cy="100" r="2.5"/>
+    <text class="callout-text" x="-6" y="124">border 3px</text>
+    <!-- inside padding: uniform 10px on all four sides -->
+    <g transform="translate(60,50)">
+      <line class="dim-line" x1="1.5" y1="143" x2="1.5" y2="157"/>
+      <line class="dim-tick" x1="-3" y1="143" x2="7" y2="143"/>
+      <line class="dim-tick" x1="-3" y1="157" x2="7" y2="157"/>
+      <text class="dim-text" x="-60" y="154">10px pad (T/R/B/L)</text>
+
+      <line class="dim-line" x1="1.5" y1="145" x2="11.5" y2="145"/>
+      <line class="dim-tick" x1="1.5" y1="140" x2="1.5" y2="150"/>
+      <line class="dim-tick" x1="11.5" y1="140" x2="11.5" y2="150"/>
+      <text class="dim-text" x="0" y="136">10px</text>
+
+      <!-- gap between label and icon -->
+      <line class="dim-line" x1="180" y1="35" x2="180" y2="49"/>
+      <line class="dim-tick" x1="175" y1="35" x2="185" y2="35"/>
+      <line class="dim-tick" x1="175" y1="49" x2="185" y2="49"/>
+      <text class="dim-text" x="190" y="46">4px row-gap</text>
+    </g>
+
+    <!-- Icon size callout -->
+    <g transform="translate(60,50)">
+      <rect fill="none" stroke="#1976D2" stroke-width="1" stroke-dasharray="3 3" x="69" y="48" width="42" height="42"/>
+      <text class="callout-text" x="115" y="80">38×38 (Lucide, 24 viewBox)</text>
+    </g>
+  </g>
+
+  <!-- ========== HORIZONTAL TILE (e.g. Schedule) ========== -->
+  <g transform="translate(560,60)">
+    <text class="section-title" x="0" y="-20">Horizontal layout</text>
+    <text class="section-sub"   x="0" y="-6">Schedule, Favorites, Announcements, Notifications, My Schedule</text>
+
+    <rect class="container-bg" x="0" y="10" width="500" height="220" rx="8"/>
+    <text class="container-txt" x="10" y="28">PHONE TILES CONTAINER · padding 10 / gap 10</text>
+
+    <!-- Horizontal tile (2/3 width) -->
+    <g transform="translate(20,50)">
+      <rect class="tile-bg" x="0" y="0" width="320" height="160" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="317" height="157" rx="10.5"/>
+
+      <!-- Label (top-left) -->
+      <text class="tile-label" x="14" y="28">Schedule</text>
+
+      <!-- Dynamic text (middle-left) -->
+      <text class="tile-desc"  x="14" y="90">Your text here</text>
+
+      <!-- Icon (top-right, 38x38) -->
+      <g transform="translate(268,14)">
+        <path class="icon" d="M3 4h18v18H3z" transform="scale(1.583)" fill="none"/>
+        <g transform="scale(1.583)">
+          <rect class="icon" x="3" y="4" width="18" height="18" rx="2"/>
+          <path class="icon" d="M16 2v4"/>
+          <path class="icon" d="M8 2v4"/>
+          <path class="icon" d="M3 10h18"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Second, 1/3 tile with top-label -->
+    <g transform="translate(350,50)">
+      <rect class="tile-bg" x="0" y="0" width="130" height="160" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="127" height="157" rx="10.5"/>
+      <text class="tile-label" x="65" y="30" text-anchor="middle">Contact</text>
+      <g transform="translate(46,50)">
+        <path class="icon" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" transform="scale(1.583)"/>
+      </g>
+    </g>
+
+    <!-- Column gap (10px) between tiles -->
+    <g transform="translate(20,50)">
+      <line class="dim-line" x1="320" y1="80" x2="330" y2="80"/>
+      <line class="dim-tick" x1="320" y1="74" x2="320" y2="86"/>
+      <line class="dim-tick" x1="330" y1="74" x2="330" y2="86"/>
+      <text class="dim-text" x="319" y="68">10px gap</text>
+    </g>
+
+    <!-- Inside padding: uniform 10px on all four sides -->
+    <g transform="translate(20,50)">
+      <line class="dim-line" x1="1.5" y1="143" x2="1.5" y2="157"/>
+      <line class="dim-tick" x1="-3" y1="143" x2="7" y2="143"/>
+      <line class="dim-tick" x1="-3" y1="157" x2="7" y2="157"/>
+      <text class="dim-text" x="-60" y="154">10px pad (T/R/B/L)</text>
+
+      <line class="dim-line" x1="1.5" y1="140" x2="11.5" y2="140"/>
+      <line class="dim-tick" x1="1.5" y1="135" x2="1.5" y2="145"/>
+      <line class="dim-tick" x1="11.5" y1="135" x2="11.5" y2="145"/>
+      <text class="dim-text" x="0" y="131">10px</text>
+
+      <!-- text→icon gap 10 -->
+      <line class="dim-line" x1="254" y1="34" x2="264" y2="34"/>
+      <line class="dim-tick" x1="254" y1="28" x2="254" y2="40"/>
+      <line class="dim-tick" x1="264" y1="28" x2="264" y2="40"/>
+      <text class="dim-text" x="228" y="22">10px text→icon</text>
+    </g>
+  </g>
+
+  <!-- ========== ICON-ONLY TILE + ROW GAP DIAGRAM ========== -->
+  <g transform="translate(40,340)">
+    <text class="section-title" x="0" y="-20">Icon-only (social) layout</text>
+    <text class="section-sub"   x="0" y="-6">YouTube, Facebook, X, Instagram — no label; brand glyph centered</text>
+
+    <rect class="container-bg" x="0" y="10" width="420" height="220" rx="8"/>
+    <text class="container-txt" x="10" y="28">PHONE TILES CONTAINER · padding 10 / gap 10</text>
+
+    <!-- Three icon-only tiles in a row -->
+    <g transform="translate(20,50)">
+      <rect class="tile-bg" x="0" y="0" width="120" height="160" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="117" height="157" rx="10.5"/>
+      <!-- Facebook-ish fill glyph (representative) -->
+      <g transform="translate(41,61)">
+        <path fill="#2E3538" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" transform="scale(1.583)"/>
+      </g>
+    </g>
+    <g transform="translate(150,50)">
+      <rect class="tile-bg" x="0" y="0" width="120" height="160" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="117" height="157" rx="10.5"/>
+      <!-- Instagram-ish fill glyph -->
+      <g transform="translate(41,61)">
+        <path fill="#2E3538" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" transform="scale(1.583)"/>
+      </g>
+    </g>
+    <g transform="translate(280,50)">
+      <rect class="tile-bg" x="0" y="0" width="120" height="160" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="117" height="157" rx="10.5"/>
+      <!-- X-logo fill glyph -->
+      <g transform="translate(41,61)">
+        <path fill="#2E3538" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" transform="scale(1.583)"/>
+      </g>
+    </g>
+
+    <!-- Column gaps (10px) -->
+    <g transform="translate(20,50)">
+      <line class="dim-line" x1="120" y1="80" x2="130" y2="80"/>
+      <line class="dim-tick" x1="120" y1="74" x2="120" y2="86"/>
+      <line class="dim-tick" x1="130" y1="74" x2="130" y2="86"/>
+      <text class="dim-text" x="119" y="68">10px</text>
+
+      <line class="dim-line" x1="250" y1="80" x2="260" y2="80"/>
+      <line class="dim-tick" x1="250" y1="74" x2="250" y2="86"/>
+      <line class="dim-tick" x1="260" y1="74" x2="260" y2="86"/>
+      <text class="dim-text" x="249" y="68">10px</text>
+    </g>
+  </g>
+
+  <!-- ========== ROW GAP DIAGRAM ========== -->
+  <g transform="translate(560,340)">
+    <text class="section-title" x="0" y="-20">Row gap — uniform 10px / 10px (both axes)</text>
+    <text class="section-sub"   x="0" y="-6">Rows of 1, 2 (⅔+⅓ or ⅓+⅔), or 3 (equal thirds). Tile flex-basis subtracts its share of the gap.</text>
+
+    <rect class="container-bg" x="0" y="10" width="500" height="220" rx="8"/>
+    <text class="container-txt" x="10" y="28">PHONE TILES CONTAINER · padding 10 / gap 10</text>
+
+    <!-- Row 1 (3 equal thirds) -->
+    <g transform="translate(10,40)">
+      <rect class="tile-bg" x="0" y="0" width="160" height="70" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="157" height="67" rx="10.5"/>
+      <text class="tile-label" x="80" y="40" text-anchor="middle">Tile A</text>
+
+      <rect class="tile-bg" x="170" y="0" width="160" height="70" rx="12"/>
+      <rect class="tile-border" x="171.5" y="1.5" width="157" height="67" rx="10.5"/>
+      <text class="tile-label" x="250" y="40" text-anchor="middle">Tile B</text>
+
+      <rect class="tile-bg" x="340" y="0" width="160" height="70" rx="12"/>
+      <rect class="tile-border" x="341.5" y="1.5" width="157" height="67" rx="10.5"/>
+      <text class="tile-label" x="420" y="40" text-anchor="middle">Tile C</text>
+    </g>
+
+    <!-- Row 2 (2/3 + 1/3) -->
+    <g transform="translate(10,120)">
+      <rect class="tile-bg" x="0" y="0" width="330" height="70" rx="12"/>
+      <rect class="tile-border" x="1.5" y="1.5" width="327" height="67" rx="10.5"/>
+      <text class="tile-label" x="165" y="40" text-anchor="middle">Tile ⅔</text>
+
+      <rect class="tile-bg" x="340" y="0" width="160" height="70" rx="12"/>
+      <rect class="tile-border" x="341.5" y="1.5" width="157" height="67" rx="10.5"/>
+      <text class="tile-label" x="420" y="40" text-anchor="middle">Tile ⅓</text>
+    </g>
+
+    <!-- Row gap dimension -->
+    <line class="dim-line" x1="10" y1="110" x2="10" y2="120"/>
+    <line class="dim-tick" x1="4" y1="110" x2="16" y2="110"/>
+    <line class="dim-tick" x1="4" y1="120" x2="16" y2="120"/>
+    <text class="dim-text" x="22" y="118">10px row-gap</text>
+
+    <!-- Column gap dimension -->
+    <line class="dim-line" x1="170" y1="45" x2="180" y2="45"/>
+    <line class="dim-tick" x1="170" y1="40" x2="170" y2="52"/>
+    <line class="dim-tick" x1="180" y1="40" x2="180" y2="52"/>
+    <text class="dim-text" x="170" y="38">10px</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(40,660)">
+    <rect fill="none" stroke="#1976D2" stroke-width="1" stroke-dasharray="3 3" x="0" y="0" width="18" height="12"/>
+    <text class="callout-text" x="24" y="10">icon box (38×38)</text>
+
+    <line class="dim-line" x1="160" y1="6" x2="180" y2="6"/>
+    <line class="dim-tick" x1="160" y1="2" x2="160" y2="10"/>
+    <line class="dim-tick" x1="180" y1="2" x2="180" y2="10"/>
+    <text class="dim-text" x="186" y="10">measurement in px</text>
+
+    <rect class="container-bg" x="320" y="0" width="18" height="12"/>
+    <text class="container-txt" x="344" y="10">TILE CONTAINER</text>
+  </g>
+</svg>

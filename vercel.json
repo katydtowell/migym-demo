@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/api/submit", "destination": "/api/submit" },
+    { "source": "/api/upload-blob", "destination": "/api/upload-blob" }
+  ],
+  "functions": {
+    "api/submit.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "api/upload-blob.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.vercel
+node_modules
+*.xlsx
+
+# Nested duplicate folder (delete via Finder)
+MiGym App Builder/
+# Backup files
+*.backup-before-*.html
+index.html.removed-code-backup.md
